@@ -1,0 +1,45 @@
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: #f0f4f8; /* Light pastel background */
+    padding: 20px;
+  }
+  
+  .team-member {
+    width: 300px; /* Adjust based on preference */
+    text-align: center;
+    background-color: #e7eff6; /* Slightly different pastel background for contrast */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  }
+  
+  .member-image {
+    width: 100%; /* Responsive image width */
+    height: auto;
+    border-radius: 50%; /* Circular images */
+    border: 3px solid #a7c4bc; /* Pastel border color */
+    margin-bottom: 20px;
+  }
+  
+  .member-info h3 {
+    color: #34568b; /* Pastel dark blue for text */
+  }
+  
+  .member-info p {
+    color: #6a7f98; /* Soft gray-blue for descriptions */
+  }
+  .member-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 4.5s ease;
+  }
+  
+  .animated-description {
+    max-height: 100px; /* Adjust based on content size */
+  }
+  
+  
