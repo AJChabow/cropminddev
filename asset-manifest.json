@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cropminddev/static/css/main.3eddce3e.css",
-    "main.js": "/cropminddev/static/js/main.61530003.js",
-    "static/js/453.fb4d3eff.chunk.js": "/cropminddev/static/js/453.fb4d3eff.chunk.js",
-    "index.html": "/cropminddev/index.html",
-    "main.3eddce3e.css.map": "/cropminddev/static/css/main.3eddce3e.css.map",
-    "main.61530003.js.map": "/cropminddev/static/js/main.61530003.js.map",
-    "453.fb4d3eff.chunk.js.map": "/cropminddev/static/js/453.fb4d3eff.chunk.js.map"
+    "main.css": "/websiteCropmind/static/css/main.3eddce3e.css",
+    "main.js": "/websiteCropmind/static/js/main.775c910f.js",
+    "static/js/453.fb4d3eff.chunk.js": "/websiteCropmind/static/js/453.fb4d3eff.chunk.js",
+    "index.html": "/websiteCropmind/index.html",
+    "main.3eddce3e.css.map": "/websiteCropmind/static/css/main.3eddce3e.css.map",
+    "main.775c910f.js.map": "/websiteCropmind/static/js/main.775c910f.js.map",
+    "453.fb4d3eff.chunk.js.map": "/websiteCropmind/static/js/453.fb4d3eff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3eddce3e.css",
-    "static/js/main.61530003.js"
+    "static/js/main.775c910f.js"
   ]
 }
