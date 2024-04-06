@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cropminddev/static/css/main.d3d1322c.css",
-    "main.js": "/cropminddev/static/js/main.0594024d.js",
+    "main.css": "/cropminddev/static/css/main.3eddce3e.css",
+    "main.js": "/cropminddev/static/js/main.61530003.js",
     "static/js/453.fb4d3eff.chunk.js": "/cropminddev/static/js/453.fb4d3eff.chunk.js",
     "index.html": "/cropminddev/index.html",
-    "main.d3d1322c.css.map": "/cropminddev/static/css/main.d3d1322c.css.map",
-    "main.0594024d.js.map": "/cropminddev/static/js/main.0594024d.js.map",
+    "main.3eddce3e.css.map": "/cropminddev/static/css/main.3eddce3e.css.map",
+    "main.61530003.js.map": "/cropminddev/static/js/main.61530003.js.map",
     "453.fb4d3eff.chunk.js.map": "/cropminddev/static/js/453.fb4d3eff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3d1322c.css",
-    "static/js/main.0594024d.js"
+    "static/css/main.3eddce3e.css",
+    "static/js/main.61530003.js"
   ]
 }
