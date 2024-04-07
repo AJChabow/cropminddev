@@ -52,10 +52,6 @@ function AboutPage() {
       <strong> Artur Chabowski</strong>
       </div>
       <div className='w-1/3 mr-4'>
-      <img className='my-2' src = {process.env.PUBLIC_URL + "/images/gab_headshot.png"} alt='showing a farmer'></img>
-      <strong> Gabriel Scali</strong>
-      </div>
-      <div className='w-1/3 mr-4'>
       <img className='my-2' src = {process.env.PUBLIC_URL + "/images/tob_headshot.jpeg"} alt='showing a farmer'></img>
       <strong> Tobias Nolte</strong>
       </div>
