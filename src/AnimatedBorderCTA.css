@@ -1,0 +1,29 @@
+.cta-container {
+    position: relative;
+    display: block; /* Changed from inline-block to block for full width */
+    margin: auto; /* Ensure center alignment if specific width is set */
+    max-width: var(--cta-max-width, 100%); /* You can adjust this with a CSS variable or directly */
+    padding: 10px; /* Adjust padding as needed */
+    box-sizing: border-box;
+}
+
+.cta-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; /* Ensure it stretches fully horizontally */
+    bottom: 0; /* Ensure it covers fully vertically */
+    width: 100%;
+    height: 100%;
+    stroke: rgb(21 128 61);
+    fill: none;
+    stroke-width: 1;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: stroke-dashoffset 5s ease-in-out;
+    border-radius: 2.5rem; /* This should be adjusted or removed based on earlier discussion */
+}
+
+.border-animate .cta-border {
+    stroke-dashoffset: 0;
+}

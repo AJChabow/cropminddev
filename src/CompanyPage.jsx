@@ -1,12 +1,86 @@
-import React from 'react';
-import './CompanyPage.css'
+import React, { useState, useRef, useEffect } from 'react';
+import './CompanyPage.css';
+import EmailSignup from './EmailSignup';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import AnimatedBorderCTA from './AnimatedBorderCTA';
 
+
+
+const ServiceCard = ({ icon, title, description }) => {
+  return (
+    <div className="fill rounded-lg overflow-hidden shadow-lg p-8 m-6 border-2 border-green-500">
+      <div className="flex items-center">
+        <img className="w-10 h-10 mr-4" src={icon} alt="Service icon" />
+        <div className="flex flex-col justify-between">
+          <div className="font-bold text-xl mb-2">{title}</div>
+          <p className="text-gray-700 text-base">{description}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const GrayBar = () => {
+  return (
+    <div className="w-3/5 mx-auto my-8 bg-gray-300 h-2 rounded-full"></div>
+  );
+};
+
+// Adjust PageCard component for mobile
+const PageCard = ({ icon, title, description }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
+    }, { threshold: 0.1 }); // Adjust threshold value as needed
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if(cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={cardRef} className={`transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-col md:flex-row items-center justify-center mx-4 md:mx-16 my-8 h-auto md:h-[80vh]`}>
+      <div className='md:w-1/3 mb-4 md:mb-0'>
+        <h1 className='font-bold text-green-800 text-3xl md:text-4xl'>{title}</h1>
+        <p className='text-xl md:text-2xl'>{description}</p>
+      </div>
+      <div className='w-full md:w-1/2'>
+        <img
+          src={icon}
+          alt='UI of the recommendation system'
+          loading="lazy"
+          className="transition-opacity duration-400 ease-in"
+        />
+      </div>
+    </div>
+  );
+};
+
+
+const bgImageUrl = `${process.env.PUBLIC_URL}/images/orchard.svg`;
 function CompanyPage() {
   return (
     <>
-    <div className='max-w-[1000px] w-full mx-auto flex flex-col'>
-      <div className = "outer-headings text-center m-20">
-            <h1 className='text-3xl'>
+
+
+    <div 
+      style={{ backgroundImage: `url(${bgImageUrl})` }} 
+      className="bg-cover h-screen flex items-center justify-center ">
+        <p className = "outer-headings text-center m-20">
+            <h1 className='text-4xl '>
               Cropmind is the platform to monitor
               <div className ="inner-headings">
                 <span >
@@ -19,99 +93,70 @@ function CompanyPage() {
                 </span>
               </div>
             </h1>
-          </div>
-      <div className='m-5'>
-        <img src = {process.env.PUBLIC_URL + "/images/for_respected_customer.png"} alt='showing the UI of the Cropmind'></img>
+          </p>
+
+    </div>
+  
+
+<PageCard icon = {process.env.PUBLIC_URL + "/images/crecommender.png"}
+          title = 'Automated Data-Driven Recommendations at Your Fingertips'
+          description = 'Unlock precision agriculture with personalized, data-driven recommendations. Guided by comprehensive analysis, make informed decisions to boost yield and conserve valuable resources, and avoid repetitive time-consuming tasks.'
+/>
+<GrayBar />
+<PageCard icon = {process.env.PUBLIC_URL + "/images/databrowsing.png"}
+          title = 'Clear Insights Through Data Exploration'
+          description = "Navigate your farm's data with ease, uncovering actionable insights for better understanding and decision-making. Our platform simplifies complex information, ensuring transparency is just a click away."
+/>
+<GrayBar />
+
+<PageCard icon = {process.env.PUBLIC_URL + "/images/for_cherished_broski.png"}
+          title = 'Discover Expert Solutions at Your Service'
+          description = 'Dive into our Solutions Marketplace, showcasing services, data, and the latest in crop research all provided by experts in their fields. Here, where innovation meets expertise, gain access to agricultural tools designed by industry leaders for unparalleled growth and efficiency.'
+/>
+<GrayBar />
+
+<div className="flex justify-center">
+  <div className='mx-auto p-10 drop-shadow-xl max-w-md'>
+    <AnimatedBorderCTA>
+      <div className="flex flex-col items-center p-8">
+        <h2 className="text-center text-3xl font-semibold my-8">Join Our Waitlist</h2>
+        <EmailSignup />
       </div>
+    </AnimatedBorderCTA>
   </div>
-<div className='h-40vh'>
-  
-</div>
-<div className='max-w-[1000px] flex flex-col mx-auto'>
-  
-
-<div className="flex flex-col space-y-4 max-w-xs mx-auto">
-  <input 
-    placeholder="Email" 
-    type="email" 
-    name="email" 
-    className="bg-white border-gray-300 border-2  w-full text-black px-2 py-3 min-w-[18rem] max-w-lg rounded-lg"
-    style={{minHeight: '2.675rem', textIndent: '10px'}}
-  />
-  <button 
-    type="submit" 
-    className="bg-black border-purple-300 border-0  text-white font-normal w-full px-3 py-3 whitespace-nowrap rounded-lg"
-    style={{minWidth: 'fit-content', minHeight: '2.675rem'}}
-  >
-    Join the waitlist
-  </button>
 </div>
 
- <div className='flex m-2'>
-  <div className='text-center'>
-    <h2 className='text-2xl'>
-          <strong>Avoid being overwhelmed by data.</strong>
-    </h2>
-    <p className='text-xl'>
-        We give you access to all of your farm's data but we make it easy
-        to view all of the actions that we recommend you take such as irrigation and fertilization.
-    </p>
-  </div>
-  
-
- </div>
- <div className=''>
-  <img src = {process.env.PUBLIC_URL + "/images/new7days.png"} alt='showing the UI of the recommendation system'></img>
-  </div>
- <div className='m-4'>
-  <div className="flex justify-center items-center">
-    <div className="inline-block px-4 py-1 border-solid border-gray-400 border-1 rounded-full">Features
-    </div>
-  </div>
- </div>
-   
-<h1 className='font-semibold text-2xl text-center'>
-    Tools to bridge the gap between research and application.
-    </h1>
- <div className='flex space-x-8'>
-    <div className='w-1/2'> 
-    <img className='' src = {process.env.PUBLIC_URL + "/images/undraw_undraw_flying_drone_u3r2_-3-_egfy (1).svg"} alt='a drone with a green vague background'></img>
-      <h1 className='text-2xl font-bold'>
-        Manage services for your drone
-      </h1>
-    </div>
-    <div className='w-1/2'> 
-    <h1 className='text-2xl font-bold'>
-    <img className='' src = {process.env.PUBLIC_URL + "/images/undraw_weather_re_qsmd (1).svg"} alt='a drone with a green vague background'></img>
-    Integrate weather forecasts, soil data, satellite data, seamlessly.
-      </h1>
-    </div>
-
-  </div>
-  <br></br>
-  <div className='flex space-x-8'>
-    <div className='w-1/2 size-64'> 
-      <h1 className='text-2xl font-bold'>
-      <img className='' src = {process.env.PUBLIC_URL + "/images/undraw_environmental_study_re_q4q8.svg"} alt='a drone with a green vague background'></img>
-      Access your local institute's best irrigation practices for your crop, and have recommendations built for you.
-      </h1>
-    </div>
-    <div className='w-1/2 '> 
-    <h1 className='text-2xl font-bold'>
-    <img className='' src = {process.env.PUBLIC_URL + "/images/undraw_app_installation_re_h36x.svg"} alt='a drone with a green vague background'></img>
-    Access third-party applications developed with the ability to utilize the data generated by your farm to provide insights.
-      </h1>
-    </div>
-
-  </div>
-      
-      
-      <p>
 
         
-      </p>
+      
+<h1 className='font-semibold text-2xl text-center underline'>
+    Tools to bridge the gap between research and application.
+    </h1>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+      <ServiceCard
+        icon= {process.env.PUBLIC_URL + "/images/dronegraphic.png"}
+        title="Manage services for your farm."
+        description=""
+      />
+      <ServiceCard
+        icon= {process.env.PUBLIC_URL + "/images/databrowser.png"}
+        title="Integrate weather forecasts, soil data, satellite data, seamlessly."
+        description=""
+      />
+      <ServiceCard
+        icon= {process.env.PUBLIC_URL + "/images/beaker.png"}
+        title="Access your local institute's best irrigation practices for your crop, and have recommendations built for you."
+        description=""
+      />
+      <ServiceCard
+        icon= {process.env.PUBLIC_URL + "/images/appstore.png"}
+        title="Integrate weather forecasts, soil data, satellite data, seamlessly."
+        description="testing the description"
+      />
       </div>
- </>
+      
+      </>
+ 
  );
 }
 
