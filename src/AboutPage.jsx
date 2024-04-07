@@ -46,12 +46,12 @@ function AboutPage() {
     <br></br>
     <br></br>
 
-    <div className='flex'>
-      <div className='w-1/3 mr-4'>
+    <div className='flex m-5'>
+      <div className='w-1/2 mr-4'>
       <img className='my-2' src = {process.env.PUBLIC_URL + "/images/art_headshot.jpeg"} alt='showing a farmer'></img>
       <strong> Artur Chabowski</strong>
       </div>
-      <div className='w-1/3 mr-4'>
+      <div className='w-1/2 mr-4'>
       <img className='my-2' src = {process.env.PUBLIC_URL + "/images/tob_headshot.jpeg"} alt='showing a farmer'></img>
       <strong> Tobias Nolte</strong>
       </div>
