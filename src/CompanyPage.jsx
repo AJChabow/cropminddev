@@ -80,19 +80,14 @@ function CompanyPage() {
       style={{ backgroundImage: `url(${bgImageUrl})` }} 
       className="bg-cover h-screen flex items-center justify-center ">
         <p className = "outer-headings text-center m-20">
-            <h1 className='text-4xl '>
-              Cropmind is the platform to monitor
-              <div className ="inner-headings">
-                <span >
-                  Fertilization <br></br>
-                  Irrigation <br></br>
-                  Weather Data <br></br>
-                  Soil Moisture <br></br>
-                  Satellite Data <br></br>
-                  Fertilization <br></br>
-                </span>
-              </div>
+            <h1 className='text-4xl font-bold max-w-xl font-poppins'>
+            Empower Your Farm and Connect with Innovation, all in one open platform
             </h1>
+            <br>
+            </br>
+            <h2 className='max-w-[50rem] text-2xl font-poppins'>
+            Access a wealth of relevant data sources, automate and simplify farming decisions, and seamlessly integrate the latest in agricultural research & robotics
+            </h2>
           </p>
 
     </div>
@@ -129,7 +124,7 @@ function CompanyPage() {
 
         
       
-<h1 className='font-semibold text-2xl text-center underline'>
+<h1 className='font-semibold text-2xl text-center underline font-poppins '>
     Tools to bridge the gap between research and application.
     </h1>
     <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -151,7 +146,7 @@ function CompanyPage() {
       <ServiceCard
         icon= {process.env.PUBLIC_URL + "/images/appstore.png"}
         title="Integrate weather forecasts, soil data, satellite data, seamlessly."
-        description="testing the description"
+        description=""
       />
       </div>
       

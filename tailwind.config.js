@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {borderWidth: {
       '6': '6px',
-    },},
+    },
+    fontFamily: {
+      "poppins": ['sans-serif']
+    }},
   },
   plugins: [],
 }
