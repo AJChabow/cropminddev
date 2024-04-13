@@ -1,0 +1,8 @@
+/* AboutPage.css */
+@media (max-width: 1000px) {
+    .responsive-column {
+      flex-direction: column; /* Change to column layout at 1000px or below */
+      align-items: center; /* Center align the content for better aesthetics */
+    }
+  }
+  

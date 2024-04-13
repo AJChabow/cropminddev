@@ -1,0 +1,27 @@
+/* NavigationBar specific styles */
+.nav-bar__link {
+    text-decoration: none;
+    color: #3F4122;
+  }
+  
+  .nav-bar__menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  
+  /* PageCard specific styles */
+  .page-card__text-container {
+    flex-basis: 40%;
+    max-width: 480px;
+  }
+  
+  @media (max-width: 1007px) {
+    .page-card {
+      flex-direction: column;
+    }
+    .page-card__text-container, .page-card__image-container {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+  
