@@ -8,7 +8,7 @@ import AnimatedBorderCTA from './AnimatedBorderCTA';
 
 const GrayBar = () => {
   return (
-    <div className="w-3/5 mx-auto my-48 bg-gray-300 h-2 rounded-full"></div>
+    <div className="w-3/5 mx-auto my-48 bg-[#b5d685]/50 h-2 rounded-full"></div>
   );
 };
 const PageCard = ({ icon, title, description }) => {
@@ -141,7 +141,7 @@ function CompanyPage() {
 />
 <GrayBar />
 
-<div className="flex justify-center">
+<div className="flex justify-center mb-24">
   <div className='mx-auto p-10 drop-shadow-xl max-w-md'>
     <AnimatedBorderCTA>
       <div className="flex flex-col items-center p-8">
