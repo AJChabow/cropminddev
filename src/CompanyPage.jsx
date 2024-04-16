@@ -8,7 +8,7 @@ import AnimatedBorderCTA from './AnimatedBorderCTA';
 
 const GrayBar = () => {
   return (
-    <div className="w-3/5 mx-auto my-8 bg-gray-300 h-2 rounded-full"></div>
+    <div className="w-3/5 mx-auto my-48 bg-gray-300 h-2 rounded-full"></div>
   );
 };
 const PageCard = ({ icon, title, description }) => {
@@ -36,7 +36,7 @@ const PageCard = ({ icon, title, description }) => {
   }, []);
 
   return (
-    <div ref={cardRef} className={`PageCard my-36 transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'} flex items-center justify-center mx-auto my-8`} style={{ maxWidth: '1200px' }}>
+    <div ref={cardRef} className={`PageCard my-8 transition-opacity duration-1000 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'} flex items-center justify-center mx-auto my-8`} style={{ maxWidth: '1200px' }}>
       <div className='text-container flex-1 my-12 mr-10' style={{ flexBasis: '40%', maxWidth: '480px' }}>
         <h1 className='font-bold text-green-800 text-3xl md:text-4xl mb-8'>{title}</h1>
         <p className='text-xl md:text-2xl'>{description}</p>
