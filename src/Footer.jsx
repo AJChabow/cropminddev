@@ -13,19 +13,18 @@ const Footer = () => {
               Cropmind
             </a>
             <p className="mt-2">
-              123 Tobias Street, City, Germany
+              CROPMIND OÜ
+              Harju maakond, Tallinn, Lasnamäe linnaosa, <br></br> Lõõtsa tn 5 // Sepapaja tn 4, 11415
               <br />
-              Email: tobias@cropmind.ai
-              <br />
-              Phone: Tobias
+              Email: contact@cropmind.ai
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-3">
             <div>
               <h2 className="text-xl font-bold mb-2">Cropmind</h2>
               <ul>
-                <li><a href="#" className="text-gray-400 hover:text-gray-200">About Us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-gray-200">Contact</a></li>
+                <li><a href="/about" className="text-gray-400 hover:text-gray-200">About Us</a></li>
+                <li><a href="/contact" className="text-gray-400 hover:text-gray-200">Contact</a></li>
                 {/* More company links */}
               </ul>
             </div>
@@ -37,9 +36,6 @@ const Footer = () => {
           © {new Date().getFullYear()} Cropmind. All rights reserved.
         </div>
         <div className="flex justify-center mt-4">
-          <a href="#" className="text-gray-400 hover:text-gray-200 mr-4">
-            <FaFacebook size="24" />
-          </a>
           <a href="#" className="text-gray-400 hover:text-gray-200">
             <FaLinkedin size="24" />
           </a>

@@ -10,7 +10,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 border-2 bg-slate-100">
+    <div className="container mx-auto p-4 border-2 bg-[#b5d685]/25">
       <h1 className="text-xl font-bold text-center mb-4">Contact Us</h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <div className="mb-4">
@@ -26,14 +26,14 @@ const ContactForm = () => {
           <select id="contactType" required value={contactType} onChange={(e) => setContactType(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
             <option value="">Select an option</option>
             <option value="partner">Potential Partner</option>
-            <option value="user">Potential User</option>
+            <option value="user">Potential Customer</option>
           </select>
         </div>
         <div className="mb-4">
           <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
           <textarea id="message" required className="mt-1 block w-full rounded-md border-green-300 shadow-sm" rows="4"></textarea>
         </div>
-        <button type="submit" className="inline-flex justify-center w-full rounded-md border border-green-300 shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm">Submit</button>
+        <button type="submit" className="inline-flex justify-center w-full rounded-md border border-green-300 shadow-sm px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm">Submit</button>
       </form>
       {showDialog && (
         <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-filter backdrop-blur-sm flex justify-center items-center p-4">

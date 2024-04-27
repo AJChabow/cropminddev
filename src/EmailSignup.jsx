@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const EmailSignup = () => {
   const [email, setEmail] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Process the email signup here (e.g., update a database, send a confirmation email, etc.)
+    axios.post('http://localhost:5000/waitlist-signup', {email})
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+      
     console.log('Email submitted:', email);
     // You might want to clear the form or show a success message after submission
   };

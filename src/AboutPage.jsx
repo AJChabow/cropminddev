@@ -1,5 +1,8 @@
 import React from 'react';
 import './AboutPage.css';
+import AnimatedBorderCTA from './AnimatedBorderCTA';
+import EmailSignup from './EmailSignup';
+import { Link } from 'react-router-dom';
 
 function AboutPage() {
   return (
@@ -14,7 +17,7 @@ function AboutPage() {
           </p>
         </div>
         <div className='flex md:flex-row responsive-column mt-16'>
-        <img className='rounded-r-lg my-3 ' src={process.env.PUBLIC_URL + "/images/farmer.png"} alt='showing a farmer' style={{ width: '100%', maxWidth: '800px' }}></img>
+        <img className='rounded-r-lg my-3 ' src={process.env.PUBLIC_URL + "/images/orchardgreen.jpg"} alt='showing a farmer' style={{ width: '100%', maxWidth: '800px' }}></img>
           <div className='text-block my-3 ml-16'>
 
             <strong className='text-green-700 text-xl font-semibold'>An ecosystem for all, with farmers at the heart</strong>
@@ -30,12 +33,12 @@ function AboutPage() {
 
             
             <img className='rounded-lg my-2' src={process.env.PUBLIC_URL + "/images/art_headshot.jpeg"} alt='showing Artur Chabowski' style={{ width: '100%', maxWidth: '300px' }}></img>
-            <strong> Artur Chabowski</strong>
+            <strong> Artur Chabowski</strong> Dev
           </div>
           <div className='text-block my-3 mx-12 text-center'>
             
             <img className='rounded-lg my-2' src={process.env.PUBLIC_URL + "/images/tob_headshot.jpeg"} alt='showing Tobias Nolte' style={{ width: '100%', maxWidth: '300px' }}></img>
-            <strong> Tobias Nolte</strong>
+            <strong> Tobias Nolte</strong> CEO
           </div>
         </div>
         <div className='flex md:flex-row responsive-column mt-36'>
@@ -44,15 +47,15 @@ function AboutPage() {
             <p className='text-lg mt-6'>
               Our journey began in the fields of our own farm, confronting firsthand the challenges that farmers face daily. 'The first farm we are empowering is our own' reflects our commitment to creating solutions rooted in actual agricultural experiences. This endeavour has evolved into a platform inspired by real farm challenges, aimed at empowering farmers with innovation and sustainability from the ground up.
             </p>
-            <button className='text-center my-16 border-4 bg-green-500 p-5 rounded-xl'>
-              Contact Us
-            </button>
+            <Link to="/contact">
+      <button className="bg-green-700 ml-20 mt-10 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-lg">
+        Contact Us
+      </button>
+    </Link>
           </div>
           <img className='rounded-l-lg my-3' src={process.env.PUBLIC_URL + "/images/sunrise.jpeg"} alt='showing a farmer' style={{ width: '100%', maxWidth: '800px' }}></img>
         </div>
-        <button className='flex justify-center flex-nowrap md:flex-row responsive-column mt-24 '>
-          Contact us
-        </button>
+        
         
         
       </div>
