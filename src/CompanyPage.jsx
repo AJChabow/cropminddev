@@ -24,6 +24,7 @@ const PageCard = ({ icon, title, description }) => {
         });
       },
       { threshold: 0.1 }
+
     );
 
     if (cardRef.current) {
@@ -43,10 +44,10 @@ const PageCard = ({ icon, title, description }) => {
       className={`PageCard my-8 transition-opacity duration-1000 ease-in ${
         isVisible ? "opacity-100" : "opacity-0"
       } flex items-center justify-center mx-auto my-8`}
-      style={{ maxWidth: "1200px" }}
+      style={{ maxWidth: "1000px" }}
     >
       <div
-        className="text-container flex-1 my-12 mr-10"
+        className="text-container flex-1 my-12 mr-10 ml-2"
         style={{ flexBasis: "40%", maxWidth: "480px" }}
       >
         <h1 className="font-bold text-green-800 text-3xl md:text-4xl mb-8">
@@ -142,7 +143,7 @@ function CompanyPage() {
       </div>
 
       <PageCard
-        icon={process.env.PUBLIC_URL + "/images/combined_1stphoto.png"}
+        icon={process.env.PUBLIC_URL + "/images/frontpic.png"}
         title="Automated Data-Driven Recommendations at Your Fingertips"
         description="Unlock precision agriculture with personalized, data-driven recommendations. Guided by comprehensive analysis, make informed decisions to boost yield and conserve valuable resources, and avoid repetitive time-consuming tasks."
       />
