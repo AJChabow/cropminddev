@@ -17,7 +17,7 @@ function AboutPage() {
           </p>
         </div>
         <div className='flex md:flex-row responsive-column mt-16'>
-        <img className='rounded-r-lg my-3 ' src={process.env.PUBLIC_URL + "/images/orchardgreen.jpg"} alt='showing a farmer' style={{ width: '100%', maxWidth: '800px' }}></img>
+        <img className='rounded-r-lg my-3 ' src={process.env.PUBLIC_URL + "/images/orchardgreen.webp"} alt='showing a farmer' style={{ width: '100%', maxWidth: '800px' }}></img>
           <div className='text-block my-3 ml-16'>
 
             <strong className='text-green-700 text-xl font-semibold'>An ecosystem for all, with farmers at the heart</strong>
@@ -28,19 +28,19 @@ function AboutPage() {
           
         </div>
         
-        <div className='flex justify-center flex-nowrap md:flex-row responsive-column bg-[#b5d685]/25 mt-24 rounded-3xl'>
+        {/* <div className='flex justify-center flex-nowrap md:flex-row responsive-column bg-[#b5d685]/25 mt-24 rounded-3xl'>
           <div className='text-block my-3 mx-12 text-center'>
 
             
-            <img className='rounded-lg my-2' src={process.env.PUBLIC_URL + "/images/art_headshot.jpeg"} alt='showing Artur Chabowski' style={{ width: '100%', maxWidth: '300px' }}></img>
+            <img className='rounded-lg my-2' src={process.env.PUBLIC_URL + "/images/art_headshot.webp"} alt='showing Artur Chabowski' style={{ width: '100%', maxWidth: '300px' }}></img>
             <strong> Artur Chabowski</strong> Dev
           </div>
           <div className='text-block my-3 mx-12 text-center'>
             
-            <img className='rounded-lg my-2' src={process.env.PUBLIC_URL + "/images/tob_headshot.jpeg"} alt='showing Tobias Nolte' style={{ width: '100%', maxWidth: '300px' }}></img>
+            <img className='rounded-lg my-2' src={process.env.PUBLIC_URL + "/images/tob_headshot.webp"} alt='showing Tobias Nolte' style={{ width: '100%', maxWidth: '300px' }}></img>
             <strong> Tobias Nolte</strong> CEO
           </div>
-        </div>
+        </div> */}
         <div className='flex md:flex-row responsive-column mt-36'>
         <div className='text-block my-3 mr-16'>
             <strong className='text-green-700 text-2xl font-semibold'>The first farm is our own</strong>
@@ -53,7 +53,7 @@ function AboutPage() {
       </button>
     </Link>
           </div>
-          <img className='rounded-l-lg my-3' src={process.env.PUBLIC_URL + "/images/sunrise.jpeg"} alt='showing a farmer' style={{ width: '100%', maxWidth: '800px' }}></img>
+          <img className='rounded-l-lg my-3' src={process.env.PUBLIC_URL + "/images/sunrise.webp"} alt='showing a farmer' style={{ width: '100%', maxWidth: '800px' }}></img>
         </div>
         
         

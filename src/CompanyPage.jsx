@@ -143,13 +143,13 @@ function CompanyPage() {
       </div>
 
       <PageCard
-        icon={process.env.PUBLIC_URL + "/images/frontpic.png"}
+        icon={process.env.PUBLIC_URL + "/images/frontpic.webp"}
         title="Automated Data-Driven Recommendations at Your Fingertips"
         description="Unlock precision agriculture with personalized, data-driven recommendations. Guided by comprehensive analysis, make informed decisions to boost yield and conserve valuable resources, and avoid repetitive time-consuming tasks."
       />
       <GrayBar />
       <PageCard
-        icon={process.env.PUBLIC_URL + "/images/databrowsing.png"}
+        icon={process.env.PUBLIC_URL + "/images/databrowsing.webp"}
         title="Clear Insights Through Data Exploration"
         description="Navigate your farm's data with ease, uncovering actionable insights for better understanding and decision-making. By easily accessing and analyzing your data, you gain a deep insight of your operations, empowering you to optimise productivity."
       />
